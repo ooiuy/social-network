@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import Header from './components/Header.js'
-import Profile from './components/Profile';
+import Navbar from './components/Navbar/Navbar';
+import Header from './components/Header/Header.js'
+import Profile from './components/Profile/Profile';
 
 
 function App() {
