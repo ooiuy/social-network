@@ -1,11 +1,11 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
+import React from 'react'
+import './App.css'
+import Navbar from './components/Navbar/Navbar'
 import Header from './components/Header/Header.js'
-import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import Profile from './components/Profile/Profile'
+import Dialogs from './components/Dialogs/Dialogs'
 import {BrowserRouter ,Route} from 'react-router-dom'
-import Music from './components/Music/Music';
+import Music from './components/Music/Music'
 import News from './components/News/News'
 import Setting from './components/Setting/Setting'
 
