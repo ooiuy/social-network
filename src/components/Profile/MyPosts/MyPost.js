@@ -9,6 +9,7 @@ const MyPost = () => {
       <div className={classes.item}>post1</div>
       <Post message="Salamandra" />
       <Post message="bratishka" />
+      <Post message="Давай, не ленись,делай" />
     </div>
   );
 };
