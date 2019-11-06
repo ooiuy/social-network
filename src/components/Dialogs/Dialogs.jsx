@@ -17,7 +17,7 @@ let messageData = [
   { id: 3, message: "vodila" },
   { id: 4, message: "povar" },
   { id: 5, message: "kartavii" },
-  { id: 6, message: "ubia" }
+  { id: 6, message: "ubica" }
 ];
 
 let messagesElements = messageData.map(m => {
