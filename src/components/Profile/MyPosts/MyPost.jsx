@@ -4,9 +4,9 @@ import Post from "./Post/Post";
 
 const MyPost = () => {
   return (
-    <div className={classes.item}>
-      POSTS
-      <div className={classes.item}>post1</div>
+    <div className={classes.postBlock}>
+      POSTS123123
+      <div className={classes.postBlock}>post1</div>
       <Post message="Salamandra" />
       <Post message="bratishka" />
       <Post message="Давай, не ленись,делай" />

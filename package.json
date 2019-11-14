@@ -28,5 +28,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ooiuy/social-network.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ooiuy/social-network/issues"
+  },
+  "homepage": "https://github.com/ooiuy/social-network#readme"
 }

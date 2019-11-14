@@ -5,8 +5,8 @@ const ProfileInfo = () => {
   return (
     <div className={classes.profileinfo}>
       <div></div>
-      <div className="description-block">avatarka</div>
-    </div>
+      <div className={classes.descriptionBlock}>avatarka</div>
+      </div>
   );
 };
 export default ProfileInfo;
