@@ -12,7 +12,7 @@ const MyPost = () => {
   let messageElements = PostData.map(p => <Post message={p.message} id={p.id} />) 
   return (
     <div className={classes.postBlock}>
-      POSTS
+      <h3>moi posti</h3>
       <div className={classes.postBlock}>{messageElements}</div>
     </div>
   );
