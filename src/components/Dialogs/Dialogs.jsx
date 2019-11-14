@@ -20,13 +20,9 @@ let messageData = [
   { id: 6, message: "ubica" }
 ];
 
-let messagesElements = messageData.map(m => {
-  return <Messages message={m.message} id={m.id} />;
-});
+let messagesElements = messageData.map(m => <Messages message={m.message} id={m.id} />);
 
-let dialogsElements = dialogsData.map(d => {
-  return <Dialogitem name={d.name} id={d.id} />;
-});
+let dialogsElements = dialogsData.map(d => <Dialogitem name={d.name} id={d.id} />);
 
 const Dialogs = () => {
   return (

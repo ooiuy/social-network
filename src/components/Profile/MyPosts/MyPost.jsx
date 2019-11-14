@@ -9,9 +9,7 @@ const MyPost = () => {
     {id: 2, message: 'Bratishka ejje'},
     {id: 3, message: 'Давай, не ленись, делай'}
   ]
-  let messageElements = PostData.map(m =>{
-    return <Post message={m.message} id={m.id} />
-  }) 
+  let messageElements = PostData.map(p => <Post message={p.message} id={p.id} />) 
   return (
     <div className={classes.postBlock}>
       POSTS
