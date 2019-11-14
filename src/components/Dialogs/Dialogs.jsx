@@ -3,7 +3,7 @@ import classes from "./Dialogs.module.css";
 import Messages from './Message/Message'
 import Dialogitem from './DialogItem/Dialogsitem'
 
-let dialogData = [
+let dialogsData = [
   { id: 1, name: "Mars" },
   { id: 2, name: "Maks" },
   { id: 3, name: "Ruslan" },
@@ -24,7 +24,7 @@ let messagesElements = messageData.map(m => {
   return <Messages message={m.message} id={m.id} />;
 });
 
-let dialogsElements = dialogData.map(d => {
+let dialogsElements = dialogsData.map(d => {
   return <Dialogitem name={d.name} id={d.id} />;
 });
 
