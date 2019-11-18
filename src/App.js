@@ -4,28 +4,31 @@ import Navbar from './components/Navbar/Navbar'
 import Header from './components/Header/Header'
 import Profile from './components/Profile/Profile'
 import Dialogs from './components/Dialogs/Dialogs'
-import {BrowserRouter ,Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import Music from './components/Music/Music'
 import News from './components/News/News'
 import Setting from './components/Setting/Setting'
 
 
 
-const App = () => {
+const App = (props) => {
+
   return (
     <BrowserRouter>
-    <div className="app-wrapper">
-      <Header />
-      <Navbar />
-      <div className="app-wrapper-content">
-        <Route path='/dialogs' render={()=> <Dialogs/>}/>
-        <Route path='/profile' render={()=><Profile/>}/>
-        <Route path='/news' component={News}/>
-        <Route path='/music' component={Music}/>
-        <Route path='/setting' component={Setting}/>
+      <div className="app-wrapper">
+        <Header />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Route path='/dialogs' render={() => <Dialogs
+            messageData={props.messageData}
+            dialogsData={props.dialogsData} />} />
+          <Route path='/profile' render={() => <Profile PostData={props.PostData} />} />
+          <Route path='/news' component={News} />
+          <Route path='/music' component={Music} />
+          <Route path='/setting' component={Setting} />
+        </div>
       </div>
-      </div>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

@@ -2,14 +2,9 @@ import React from "react";
 import classes from "./MyPost.module.css";
 import Post from "./Post/Post";
 
-const MyPost = () => {
+const MyPost = (props) => {
 
-  let PostData = [
-    {id: 1, message: 'Salamandra'},
-    {id: 2, message: 'Bratishka ejje'},
-    {id: 3, message: 'Давай, не ленись, делай'}
-  ]
-  let messageElements = PostData.map(p => <Post message={p.message} id={p.id} />) 
+  let messageElements = props.PostData.map(p => <Post message={p.message} id={p.id} />) 
   return (
     <div className={classes.postBlock}>
       <h3>moi posti</h3>
