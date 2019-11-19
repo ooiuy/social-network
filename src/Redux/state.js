@@ -40,7 +40,7 @@ export const addPost = () => {
         message: state.profilePage.newPostText,
     }
     state.profilePage.PostData.push(newPost)
-    state.profilePage.newPostText =''
+    state.profilePage.newPostText = ''
     rerenderEntireTree(state)
 }
 export const updateNewPostText = (newText) => {
@@ -61,7 +61,7 @@ export const updateNewMessageText = (newTextMessage) => {
     state.dialogsPage.newMessageText = newTextMessage
     rerenderEntireTree(state)
 }
-export const subscribe =(observer) =>{
+export const subscribe = (observer) => {
     rerenderEntireTree = observer
 }
 
