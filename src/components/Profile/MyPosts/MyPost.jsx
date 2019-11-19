@@ -16,7 +16,7 @@ const MyPost = (props) => {
 
   return (
     <div className={classes.postBlock}>
-      <h3>moi posti</h3>
+      <h3>Мои посты</h3>
       <div className={classes.addtext}>
         <textarea
           ref={newPostElement}

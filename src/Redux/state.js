@@ -26,7 +26,8 @@ let state = {
             { id: 4, message: "povar" },
             { id: 5, message: "kartavii" },
             { id: 6, message: "ubica" }
-        ]
+        ],
+        newMessageText: 'add message'
     },
 
 }
@@ -44,5 +45,20 @@ export let updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
+
+export let addMessage = () => {
+    let newMessage = {
+        id: 7,
+        message: state.dialogsPage.newMessageText,
+    }
+    state.dialogsPage.messageData.push(newMessage)
+    state.dialogsPage.newMessageText = ''
+    rerenderEntireTree(state)
+}
+export let updateNewMessageText = (newTextMessage) => {
+    state.dialogsPage.newMessageText = newTextMessage
+    rerenderEntireTree(state)
+}
+
 
 export default state
