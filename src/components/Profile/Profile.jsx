@@ -6,11 +6,13 @@ import MyPost from "./MyPosts/MyPost";
 
 const Profile = (props) => {
 
-
   return (
     <div className={classes.content}>
-      <ProfileInfo/>
-      <MyPost PostData={props.state.PostData} addPost={props.addPost}/>
+      <ProfileInfo />
+      <MyPost PostData={props.profilePage.PostData}
+        newPostText={props.profilePage.newPostText}
+        updateNewPostText={props.updateNewPostText}
+        addPost={props.addPost} />
     </div>
   )
 }

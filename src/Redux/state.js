@@ -7,6 +7,7 @@ let state = {
             { id: 2, message: 'Bratishka ejje' },
             { id: 3, message: 'Давай, не ленись, делай111' }
         ],
+        newPostText: 'add post'
 
     },
     dialogsPage: {
@@ -30,14 +31,18 @@ let state = {
 
 }
 
-export let addPost = (postMessage) =>{
+export let addPost = () => {
     let newPost = {
-        id:5,
-        message: postMessage,
+        id: 5,
+        message: state.profilePage.newPostText,
     }
     state.profilePage.PostData.push(newPost)
+    state.profilePage.newPostText =''
     rerenderEntireTree(state)
 }
-
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText
+    rerenderEntireTree(state)
+}
 
 export default state
