@@ -3,14 +3,18 @@ import classes from "./MyPost.module.css";
 import Post from "./Post/Post";
 
 const MyPost = (props) => {
+ 
   let messageElements = props.PostData.map(p => <Post message={p.message} id={p.id} />)
+  
   let newPostElement = React.createRef()
+
   let addPost = () => {
     props.dispatch({type: 'ADD_POST'})
   }
+  
   let onPostChange = () => {
     let text = newPostElement.current.value
-    let action =({ type: 'UPDATE_NEW_POST_TEXT', newText: text})
+    let action = { type: 'UPDATE_NEW_POST_TEXT', newText: text}
     props.dispatch(action)
   }
 

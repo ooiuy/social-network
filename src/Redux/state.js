@@ -66,9 +66,7 @@ let store = {
             this._state.profilePage.newPostText = action.newText
             this._callSubscriber(this._state)
         }
-
     }
-
 }
 
 export default store
