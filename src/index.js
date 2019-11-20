@@ -1,10 +1,9 @@
-import state, { subscribe } from './Redux/state'
+import store from './Redux/state'
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { addPost, updateNewPostText, addMessage, updateNewMessageText } from './Redux/state'
 import { BrowserRouter } from 'react-router-dom'
 
 
@@ -13,15 +12,15 @@ let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
             <App state={state}
-                addPost={addPost}
-                updateNewPostText={updateNewPostText}
+                addPost={store.addPost.bind(store)}
+                updateNewPostText={store.updateNewPostText.bind(store)}
             /*
-            addMessage={addMessage}
-            updateNewMessageText={updateNewMessageText}
+            addMessage={store.addMessage.bind(store)}
+            updateNewMessageText={store.updateNewMessageText.bind(store)}
             *//>
         </BrowserRouter>, document.getElementById('root'));
 }
 
 
-rerenderEntireTree(state)
-subscribe(rerenderEntireTree)
+rerenderEntireTree(store.getState())
+store.subscribe(rerenderEntireTree)
