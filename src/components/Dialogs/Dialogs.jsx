@@ -18,8 +18,8 @@ const Dialogs = (props) => {
     props.store.dispatch(sendMessageCreator())
   }
   let onNewMessageChange = (e) => {
-    let body= e.target.value
-    props.store.dispatch(updateNewMessageTextCreator(body))
+    let newMessageSend= e.target.value
+    props.store.dispatch(updateNewMessageTextCreator(newMessageSend))
 
   }
   
