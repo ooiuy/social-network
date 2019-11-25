@@ -1,22 +1,21 @@
 import React from "react";
 import classes from "./MyPost.module.css";
 import Post from "./Post/Post";
-import {updateNewPostTextActionCreator, addPostActionCreator} from '../../../Redux/profileReducer'
+
 
 const MyPost = (props) => {
- 
+
   let messageElements = props.PostData.map(p => <Post message={p.message} id={p.id} />)
-  
+
   let newPostElement = React.createRef()
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator())
+  let onAddPost = () => {
+    props.addPost()
   }
-  
+
   let onPostChange = () => {
     let text = newPostElement.current.value
-    let action = updateNewPostTextActionCreator(text)
-    props.dispatch(action)
+    props.updateNewPostText(text)
   }
 
 
@@ -30,7 +29,7 @@ const MyPost = (props) => {
           onChange={onPostChange} />
       </div>
       <div className={classes.btnpost}>
-        <button onClick={addPost}>Опубликовать</button>
+        <button onClick={onAddPost}>Опубликовать</button>
       </div>
       <div className={classes.postBlock}>{messageElements}</div>
     </div>
