@@ -4,7 +4,7 @@ import Post from "./Post/Post";
 
 
 const MyPost = (props) => {
-
+  
   let messageElements = props.PostData.map(p => <Post message={p.message} id={p.id} />)
 
   let newPostElement = React.createRef()

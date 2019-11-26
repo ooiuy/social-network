@@ -17,7 +17,7 @@ const MyPostContainer = (props) => {
     updateNewPostText={onPostChange} 
     addPost={addPost} 
     newPostText={state.profilePage.newPostText}
-    post={state.profilePage.postData} />)
+    postData={state.profilePage.postData} />)
 }
 
 export default MyPostContainer;
